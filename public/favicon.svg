@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9333EA" />
+      <stop offset="50%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#6D28D9" />
+    </linearGradient>
+    <filter id="planeShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Background Squircle with Subtle Neon Rim -->
+  <rect x="24" y="24" width="464" height="464" rx="116" fill="url(#brandGrad)" />
+  <rect x="24" y="24" width="464" height="464" rx="116" fill="none" stroke="rgba(255, 255, 255, 0.22)" stroke-width="8" />
+
+  <!-- PostPilot Paper Plane Icon -->
+  <g transform="translate(256, 268) scale(14) translate(-12, -12)" filter="url(#planeShadow)">
+    <g transform="rotate(-45 12 12) translate(1, -1)">
+      <!-- Main Wings -->
+      <polygon points="22 2 15 22 11 13 2 9 22 2" fill="#FFFFFF" />
+      <!-- Fold Line / Shading -->
+      <polygon points="22 2 11 13 2 9 22 2" fill="rgba(240, 240, 255, 0.88)" />
+      <line x1="22" y1="2" x2="11" y2="13" stroke="#7C3AED" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+  </g>
+</svg>

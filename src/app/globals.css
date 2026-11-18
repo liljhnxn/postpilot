@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0B1020;
+  --background-secondary: #121A2B;
+  --background-card: #172137;
+  --accent-primary: #8B5CF6;
+  --accent-secondary: #A78BFA;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --border-color: rgba(148, 163, 184, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  border-color: var(--border-color);
+}
+
+body {
+  color: var(--text-primary);
+  background-color: var(--background);
+  min-height: 100vh;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B1020;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Layered Glass & Card Utilities */
+.glass-panel {
+  background: rgba(23, 33, 55, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.luxury-card {
+  background: #172137;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 0.75rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.luxury-card:hover {
+  border-color: rgba(148, 163, 184, 0.22);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px -3px rgba(139, 92, 246, 0.35);
+}
+
+.button-primary {
+  background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+  color: #FFFFFF;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 10px rgba(139, 92, 246, 0.25);
+}
+
+.button-primary:hover {
+  background: linear-gradient(135deg, #986BF7 0%, #8648F4 100%);
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.4);
+  transform: translateY(-1px);
+}
+
+.button-primary:active {
+  transform: translateY(0);
+}
+
+.button-secondary {
+  background: rgba(23, 33, 55, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  color: #F8FAFC;
+  transition: all 0.2s ease;
+}
+
+.button-secondary:hover {
+  background: #1D2A45;
+  border-color: rgba(148, 163, 184, 0.25);
+}
